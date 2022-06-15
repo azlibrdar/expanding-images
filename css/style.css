@@ -1,0 +1,192 @@
+/* <!-- Designed & Developed By Azlan Ibrahim --> */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    background-color: #fafafa;
+  }
+  
+  .header {
+    background-color: #161616;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 14px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    color: #aaaaaa;
+    text-transform: capitalize;
+  }
+  
+  .container {
+    background-color: #fafafa;
+    width: 100vw;
+    height: 80vh;
+    padding: 48px;
+  
+    display: -webkit-box;
+  
+    display: -ms-flexbox;
+  
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .p1 {
+    background-image: url("https://images.pexels.com/photos/460659/pexels-photo-460659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  
+  .p2 {
+    background-image: url("https://images.pexels.com/photos/1796731/pexels-photo-1796731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  
+  .p3 {
+    background-image: url("https://images.pexels.com/photos/227517/pexels-photo-227517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  
+  .p4 {
+    background-image: url("https://images.pexels.com/photos/5776631/pexels-photo-5776631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  
+  .p5 {
+    background-image: url("https://images.pexels.com/photos/1738536/pexels-photo-1738536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  
+  .panel {
+    height: 100%;
+    margin: 8px;
+    border-radius: 8px;
+  
+    -webkit-box-flex: 0.5;
+  
+        -ms-flex: 0.5;
+  
+            flex: 0.5;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+  
+    position: relative;
+    cursor: pointer;
+  
+    -webkit-transition: -webkit-box-flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+    transition: -webkit-box-flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+    -o-transition: flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+    transition: flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+    transition: flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-box-flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), -ms-flex 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .panel.active {
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
+    cursor: default;
+    -webkit-box-shadow: 2px 4px 43px -10px rgba(138, 138, 138, 1);
+    box-shadow: 2px 4px 43px -10px rgba(138, 138, 138, 1);
+  }
+  
+  .panel .panel-title {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  
+    border-radius: 8px;
+    padding: 16px 48px;
+    font-size: 24px;
+    background-color: #ffffff7e;
+    mix-blend-mode: screen;
+  
+    opacity: 0;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transition-delay: 0.1s;
+         -o-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  
+  .panel.active .panel-title {
+    opacity: 1;
+  }
+  
+  /* Responsive CSS */
+  @media screen and (max-width: 1000px) {
+    .panel .panel-title {
+      font-size: 16px;
+    }
+  
+    .container {
+      padding: 24px;
+  
+      -webkit-box-orient: vertical;
+  
+      -webkit-box-direction: normal;
+  
+          -ms-flex-direction: column;
+  
+              flex-direction: column;
+    }
+  
+    .panel {
+      width: 100%;
+      flex: 1;
+    }
+  
+    .panel.active {
+      width: 100%;
+      -webkit-box-flex: 5;
+          -ms-flex: 5;
+              flex: 5;
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+    .header-title {
+      font-size: 16px;
+    }
+
+    .panel {
+      flex: 2;
+    }
+  
+    .panel .panel-title {
+      font-size: 12px;
+      padding: 4px 16px;
+    }
+  
+    .container {
+      padding: 16px;
+    }
+  
+    .panel.active {
+      width: 100%;
+      -webkit-box-flex: 4;
+          -ms-flex: 4;
+              flex: 4;
+    }
+  }
